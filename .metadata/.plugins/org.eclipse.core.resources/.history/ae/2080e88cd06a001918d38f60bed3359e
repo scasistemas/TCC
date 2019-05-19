@@ -1,0 +1,16 @@
+package com.captacaosca.domain;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="lancamentos")
+public class Lancamentos {
+
+	@EmbeddedId
+	private LancamentoId id;
+	
+	
+	
+}

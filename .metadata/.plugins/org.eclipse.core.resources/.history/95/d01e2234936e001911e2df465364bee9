@@ -1,0 +1,7 @@
+package com.captacaosca.domain;
+
+public class Config_coleta {
+
+	private int del
+	
+}

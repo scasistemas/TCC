@@ -1,0 +1,23 @@
+package com.captacaosca.repository;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Date;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.captacaosca.domain.LancamentoId;
+import com.captacaosca.domain.Lancamentos;
+import com.captacaosca.domain.Produtor;
+
+public class ProdutorRepositoryTests {
+
+	@Autowired private ProdutorRepository produtorRepository;
+	@Test
+	public void AsaveTest() {
+		Produtor produtor = new Produtor(null, "001407", "JOSE ORLANDO DE A. CARVALHO"   , null);
+		Produtor produtorCreated= produtorRepository.save(produtor);
+		assertThat(produtorCreated.getCodigo().equalsIgnoreCase("001407"));
+	}
+}

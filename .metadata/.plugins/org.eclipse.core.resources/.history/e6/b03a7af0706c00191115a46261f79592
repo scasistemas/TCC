@@ -1,0 +1,5 @@
+package com.captacaosca.dto;
+
+public class LancamentoSaveDto {
+
+}

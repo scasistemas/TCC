@@ -1,0 +1,20 @@
+package com.captacaosca.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.captacaosca.domain.LancamentoId;
+import com.captacaosca.domain.Lancamentos;
+
+
+@Repository
+public interface LancamentoRepository extends JpaRepository<Lancamentos,LancamentoId> {
+	
+	@Query("SELECT * FROM lancamentos where laedata=?1 and motorista=?2")
+	public Optional<List<Lancamentos>> list_all_byDataAndMotorista(String data,String motorista);
+
+}

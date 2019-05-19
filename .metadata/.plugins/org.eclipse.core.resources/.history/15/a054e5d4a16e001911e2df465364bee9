@@ -1,0 +1,19 @@
+package com.captacaosca.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.captacaosca.domain.Produtor;
+import com.captacaosca.repository.ProdutorRepository;
+
+@Service
+public class ProdutorService {
+
+	@Autowired private ProdutorRepository produtorRepository;
+	
+	public Produtor save(Produtor produtor) {
+		Produtor produtorCreatd=produtorRepository.save(produtor);
+		return produtorCreatd;
+	}
+	
+}

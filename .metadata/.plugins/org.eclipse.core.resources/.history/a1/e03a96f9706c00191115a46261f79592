@@ -1,0 +1,18 @@
+package com.captacaosca.dto;
+
+import java.io.Serializable;
+import java.util.List;
+
+import com.captacaosca.domain.Lancamentos;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public class LancamentoSaveDto implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private List<Lancamentos> lancamento;
+}

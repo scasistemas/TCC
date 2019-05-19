@@ -1,0 +1,20 @@
+package com.captacaosca.domain;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+
+
+public abstract class Controle_Registros implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Column(nullable= false)
+	private int del;
+	
+	private Motorista motorista;
+	
+}

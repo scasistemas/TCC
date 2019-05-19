@@ -1,0 +1,20 @@
+package com.captacaosca.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.captacaosca.domain.Motorista;
+import com.captacaosca.repository.MotoristaRepository;
+
+@Service
+public class MotoristaService {
+
+	@Autowired private MotoristaRepository motoristaepository;
+	
+	public Motorista save(Motorista motorista) {
+		Motorista motoristaCreatd=motoristaepository.save(motorista);
+		return motoristaCreatd;
+	}
+	
+	
+}

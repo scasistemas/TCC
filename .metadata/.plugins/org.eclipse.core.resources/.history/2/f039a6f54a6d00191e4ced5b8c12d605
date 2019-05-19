@@ -1,0 +1,9 @@
+package com.captacaosca.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.captacaosca.domain.Linha;
+
+public interface LinhaRepository  extends JpaRepository<Linha,String> {
+
+}

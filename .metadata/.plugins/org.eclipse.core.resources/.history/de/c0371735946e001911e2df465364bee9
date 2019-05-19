@@ -1,0 +1,21 @@
+package com.captacaosca.domain;
+
+import javax.persistence.Column;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter @Setter
+public class Controle_Registros {
+
+	@Column(nullable= false)
+	private int del;
+	
+	@Column(nullable= false)
+	private int empresa;
+	
+}

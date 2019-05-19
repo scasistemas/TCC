@@ -1,0 +1,11 @@
+package com.captacaosca.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.captacaosca.domain.Produtor;
+
+@Repository
+public interface ProdutorRepository extends JpaRepository<Produtor,String> {
+
+}

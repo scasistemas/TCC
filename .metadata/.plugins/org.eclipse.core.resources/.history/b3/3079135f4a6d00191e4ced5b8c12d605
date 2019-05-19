@@ -1,0 +1,9 @@
+package com.captacaosca.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.captacaosca.domain.Motorista;
+
+public interface ProdutorRepository extends JpaRepository<Motorista,String> {
+
+}

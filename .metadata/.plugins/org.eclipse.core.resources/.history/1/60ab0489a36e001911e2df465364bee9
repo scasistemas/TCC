@@ -1,0 +1,18 @@
+package com.captacaosca.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.captacaosca.domain.Materia;
+
+
+@Repository
+public interface MateriaRepository  extends JpaRepository<Materia,String> {
+	
+	@Query("SELECT p FROM materia p WHERE motorista = ?1 and del = 0")
+	public Optional<Materia> list_all(String motorista);
+
+}

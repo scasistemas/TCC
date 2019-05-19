@@ -1,0 +1,12 @@
+package com.captacaosca.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.captacaosca.domain.Fazenda;
+import com.captacaosca.domain.FazendaId;
+
+@Repository
+public interface FazendaRepository extends JpaRepository<Fazenda,FazendaId> {
+
+}

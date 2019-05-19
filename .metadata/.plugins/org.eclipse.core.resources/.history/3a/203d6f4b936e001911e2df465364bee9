@@ -1,0 +1,7 @@
+package com.captacaosca.domain;
+
+public class Controle_Registros {
+
+	private int del
+	
+}

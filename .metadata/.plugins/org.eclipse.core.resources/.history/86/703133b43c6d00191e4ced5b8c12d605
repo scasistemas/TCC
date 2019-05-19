@@ -1,0 +1,28 @@
+package com.captacaosca.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.Getter;
+
+public class Produtor {
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	private Long _id;
+	
+	@Column(length=6,nullable= false)
+	private String codigo;
+	
+	@Column(length=50,nullable= false)
+	private String nome;
+	
+	@Getter(onMethod = @__({@JsonIgnore}))
+	@OneToMany(mappedBy="codigo")
+	private List<Fazenda> fazendas= new ArrayList<Fazenda>();
+}
